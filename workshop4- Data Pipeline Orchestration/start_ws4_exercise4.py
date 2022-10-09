@@ -92,7 +92,7 @@ with DAG(
     )
     t3 = PythonOperator(
         task_id="merge_data",
-        python_callable=get_conversion_rate,
+        python_callable=merge_data,
         op_kwargs={"conversion_rate_path": conversion_rate_output_path ,
                     "transaction_path" : mysql_output_path , 
                     "output_path" : final_output_path},
